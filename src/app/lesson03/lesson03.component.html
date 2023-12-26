@@ -1,0 +1,11 @@
+<div class="parentStyle">
+    <h1>Plan your day!</h1>
+    <h2>User: Ivan Ivanov. Count of Tasks {{ countOfTasks}}</h2>
+    <div class="parentStyleWrapper">
+        <input type="text" class="parentInput" [(ngModel)]="parentData" ngDefaultControl>
+        <button value="add" class="parentButton" (click)="addInfo()" >Add</button>
+    </div>
+    <app-child1 [fromParent]="parentItems" [countTask]="countOfTasks" (changeCounter)="changeCounterHandle($event)"></app-child1>
+
+</div>
+

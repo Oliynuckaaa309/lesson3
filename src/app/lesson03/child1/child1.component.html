@@ -1,0 +1,31 @@
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Task</th>
+        <th>Check</th>
+        <th>DONE/IN PROGRESS</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let info of fromParent, let i=index" >
+        <td>{{i+1}}.</td>
+        <td>{{info.nameTask}}</td>
+        <td><input type="checkbox" [(ngModel)]="info.statusTask"></td>
+        <td [ngStyle]="{'color':info.statusTask?'Green':'Red'}">{{info.statusTask?'Done':'In PROGRESS'}}</td>
+        <td><button class="childEdit" (click)="saveChanges(i)" >Edit</button></td>
+        <td><button class="childDelete" (click)="deleteTask(i)" [attr.disabled]="!info.statusTask?true:null" [ngStyle]="{'background-color': info.statusTask ? 'rgba(255, 0, 0, 1)' : 'rgba(255, 0, 0, 0.5)'}"
+
+          >Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="areaSave" *ngIf="isOpen">
+    <input type="text" class="textSave" [(ngModel)]="changesInfo">
+    <button value="add" class="buttonSave" (click)="saveNewTasks()">Save</button>
+  </div>
+  
+
+

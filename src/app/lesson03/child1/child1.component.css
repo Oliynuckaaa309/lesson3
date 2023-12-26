@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+thead,
+tr {
+    height: 70px;
+
+    border-top: 1px solid rgb(154, 156, 156);
+    border-bottom: 1px solid rgb(154, 156, 156);
+}
+
+td, th {
+    text-align: center;
+    border: none;
+    
+
+}
+tr:hover{
+    background-color: rgba(227, 231, 230, 0.966);
+   
+}
+.childEdit, .childDelete{
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    color: black;
+    background: orange;
+    border: none;
+}
+.childDelete{
+    width: 80%;
+    color: white;
+    background-color: red;
+}
+.areaSave{
+    height: 60px;
+    width: 90%;
+    background-color: rgb(202, 199, 199);
+    display: flex;
+    justify-content: space-around
+}
+.textSave{
+    width: 20%;
+    height: 35px;
+    margin-top: 15px ;
+    padding-left: 10px;
+    
+}
+.buttonSave{
+  width: 10%;
+  height: 35px;
+  margin-top: 15px ;
+  background-color: green;
+  border: none;
+  color: white;
+}
